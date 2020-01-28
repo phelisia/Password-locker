@@ -9,7 +9,7 @@ Technologies used
 HTML CSS Angular Python
 
 Development server
-Run ng server for a dev server
+Run run.py
 
 Live links
 https://phelisia.github.io/Quotes/
