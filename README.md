@@ -20,4 +20,5 @@ Licensed under the MIT license. copyright (c) 2020 Password-locker
 ## Contacts
 Email:phelisiajeruto@gmail.com Cell:0718117097
 
-Codebeat
+## Codebeat
+[![codebeat badge](https://codebeat.co/badges/ca1a612e-0abb-4fd5-8247-d27f3303c5d2)](https://codebeat.co/projects/github-com-phelisia-password-locker-master)
