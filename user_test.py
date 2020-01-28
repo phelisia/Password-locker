@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("James","Jemo","0712345678","james@ms.com") # create account object
+        self.new_user = User("James","Jemo","0712345678","james@ms.com","private") # create account object
 
 
     def test_init(self):
@@ -23,10 +23,11 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.user_name,"James")
-        self.assertEqual(self.new_user.first_name,"Jemo")
-        self.assertEqual(self.new_user.phone_number,"0712345678")
-        self.assertEqual(self.new_user.email,"james@ms.com")
+        self.assertEqual(self.new_user.user_name,"Phelisia")
+        self.assertEqual(self.new_user.first_name,"pjbeb")
+        self.assertEqual(self.new_user.phone_number,"0743517017")
+        self.assertEqual(self.new_user.email,"phelisia@ms.com")
+        self.assertEqual(self.new_user.password,"private")
     def test_save_user(self):
         '''
         test_save_user test case to test if the user object is saved into
@@ -42,7 +43,7 @@ class TestUser(unittest.TestCase):
             objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","0712345678","test@user.com") # new user
+            test_user = User("Test","user","0743517017","test@user.com","private") # new user
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
             # setup and class creation up here
@@ -59,7 +60,7 @@ class TestUser(unittest.TestCase):
             objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","0712345678","test@user.com") # new user
+            test_user = User("Test","user","0743517017","test@user.com","private") # new user
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
             # More tests above
@@ -68,22 +69,22 @@ class TestUser(unittest.TestCase):
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","0712345678","test@user.com") # new contact
+            test_user = User("Test","user","0712345678","test@user.com","private") # new user
             test_user.save_user()
 
             self.new_user.delete_user()# Deleting a user object
             self.assertEqual(len(User.user_list),1)
 
-def test_find_user_by_user_name(self):
+def test_find_user_by_password(self):
         '''
-        test to check if we can find a contact by phone number and display information
+        test to check if we can find a user by password and display information
         '''
 
         self.new_user.save_user()
-        test_user = User("Test","user","James","test@user.com") # new contact
+        test_user = User("Test","user","0712345678","test@user.com","private") # new user
         test_user.save_user()
 
-        found_user = user.find_by_user_name("James")
+        found_user = user.find_by_password("private")
 
         self.assertEqual(found_user.email,test_user.email)
 
@@ -93,10 +94,10 @@ def test_user_exists(self):
         '''
 
         self.new_user.save_user()
-        test_user = User("Test","user","James","test@user.com") # new user
+        test_user = User("Test","user","test@user.com","private") # new user
         test_user.save_user()
 
-        user_exists = User.user_exist("James")
+        user_exists = User.user_exist("private")
 
         self.assertTrue(user_exists)
 def test_display_all_users(self):
