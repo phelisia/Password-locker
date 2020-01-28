@@ -15,7 +15,7 @@ Live links
 https://phelisia.github.io/Password-locker/.
 
 License
-Licensed under the MIT license. copyright (c) 2020 Quotes
+Licensed under the MIT license. copyright (c) 2020 Password-locker
 
 Contacts
 Email:phelisiajeruto@gmail.com Cell:0718117097
