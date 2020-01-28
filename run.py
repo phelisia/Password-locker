@@ -1,10 +1,10 @@
 #!/usr/bin/env python3.6
 from user import User
-def create_user(fname,lname,phone,email):
+def create_user(uname,fname,phone,email,password):
     '''
     Function to create a new user
     '''
-    new_user = User(fname,lname,phone,email)
+    new_user = User(uname,fname,phone,email,password)
     return new_user
 def save_user(user):
     '''
@@ -20,7 +20,7 @@ def find_user(password):
     '''
     Function that finds a user by password and returns the user
     '''
-    return User.find_by_password(private)
+    return User.find_by_password(password)
 def check_existing_user(password):
     '''
     Function that check if a contact exists with that number and return a Boolean
@@ -44,9 +44,9 @@ def main():
                             print("New User")
                             print("-"*10)
                             print ("User name ....")
-                            f_name = input()
+                            u_name = input()
                             print("First name ...")
-                            l_name = input()
+                            f_name = input()
                             print("Phone number ...")
                             p_number = input()
                             print("Email address ...")
@@ -57,7 +57,7 @@ def main():
                             print ('\n')
                             print(f"New User {u_name} {f_name} created")
                             print ('\n')
-                    elif short_code == 'dc':
+                    elif short_code == 'du':
                             if display_user():
                                     print("Here is a list of all your users")
                                     print('\n')
@@ -68,7 +68,7 @@ def main():
                                     print('\n')
                                     print("You dont seem to have any users saved yet")
                                     print('\n')
-                    elif short_code == 'fc':
+                    elif short_code == 'fu':
                             print("Enter the password")
                             search_password = input()
                             if check_existing_user(search_password):
