@@ -12,7 +12,7 @@ Development server
 Run run.py
 
 Live links
-https://phelisia.github.io/Quotes/
+https://phelisia.github.io/Password-locker/.
 
 License
 Licensed under the MIT license. copyright (c) 2020 Quotes
