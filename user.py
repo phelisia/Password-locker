@@ -53,7 +53,7 @@ class User:
         Returns :
             Boolean: True or false depending if the user exists
         '''
-        for user in cls.user_list:
+        for user in cls.users_list:
             if user.password == password:
                     return True
 
