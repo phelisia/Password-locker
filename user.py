@@ -13,7 +13,7 @@ class User:
         self.first_name = first_name
         self.phone_number = number
         self.email = email
-        # self.password = password
+        self.password = password
         user_list = [] # Empty user list
  # Init method up here
     def save_user(self):

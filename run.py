@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.6
 from user import User
-def create_user(uname,fname,phone,emailpassword):
+from credentials import Credentials
+def create_user(uname,fname,phone,email,password):
     '''
     Function to create a new user
     '''
@@ -53,15 +54,16 @@ def main():
                             e_address = input()
                             print("Password ...")
                             password = input()
+
                             save_user(create_user(u_name,f_name,p_number,e_address,password))
                             print ('\n')
                             print(f"New User {u_name} {f_name} created")
                             print ('\n')
                     elif short_code == 'du':
-                            if display_user():
+                            if display_users():
                                     print("Here is a list of all your users")
                                     print('\n')
-                                    for user in display_user():
+                                    for user in display_users():
                                             print(f"{user.user_name} {user.first_name} .....{user.phone_number}")
                                     print('\n')
                             else:
